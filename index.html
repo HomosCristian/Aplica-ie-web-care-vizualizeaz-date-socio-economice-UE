@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <title>Vizualizare date UE</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Vizualizare Date UE: PIB / Speranță de viață / Populație</h1>
+  </header>
+
+  <main>
+    <section class="lineChartSection">
+      <label for="indicatorSelect">Indicator: </label>
+      <select id="indicatorSelect">
+        <option value="pib">PIB per capita</option>
+        <option value="sv">Speranță de viață</option>
+        <option value="pop">Populație</option>
+      </select>
+
+      <label for="countrySelect">Țară: </label>
+      <select id="countrySelect">
+        <option value="BE">Belgia</option>
+        <option value="BG">Bulgaria</option>
+        <option value="CZ">Cehia</option>
+        <option value="DK">Danemarca</option>
+        <option value="DE">Germania</option>
+        <option value="EE">Estonia</option>
+        <option value="IE">Irlanda</option>
+        <option value="EL">Grecia</option>
+        <option value="ES">Spania</option>
+        <option value="FR">Franța</option>
+        <option value="HR">Croația</option>
+        <option value="IT">Italia</option>
+        <option value="CY">Cipru</option>
+        <option value="LV">Letonia</option>
+        <option value="LT">Lituania</option>
+        <option value="LU">Luxemburg</option>
+        <option value="HU">Ungaria</option>
+        <option value="MT">Malta</option>
+        <option value="NL">Țările de Jos</option>
+        <option value="AT">Austria</option>
+        <option value="PL">Polonia</option>
+        <option value="PT">Portugalia</option>
+        <option value="RO">România</option>
+        <option value="SI">Slovenia</option>
+        <option value="SK">Slovacia</option>
+        <option value="FI">Finlanda</option>
+        <option value="SE">Suedia</option>
+      </select>
+      <button id="btnDrawChart">Desenează Grafic</button>
+
+      <svg 
+        id="lineChart" 
+        width="600" 
+        height="400" 
+        style="border:1px solid black; display:block; margin:20px auto;">
+      </svg>
+      
+      <div id="tooltip" class="hidden"></div>
+    </section>
+
+    <section class="bubbleChartSection" style="position: relative;">
+      <label for="yearSelect">Alege anul: </label>
+      <select id="yearSelect">
+      </select>
+      <button id="btnBubbleChart">Bubble Chart</button>
+      <button id="btnAnimateBubbleChart">Animare</button>
+      <button id="btnStopAnimation">Oprește Animarea</button>
+      <button 
+      id="btnResetBubbleChart" 
+      style="
+        position: absolute; 
+        top: 10px; 
+        right: 10px; 
+        z-index: 10;
+        padding: 5px 10px;
+        font-size: 0.9em;
+        cursor: pointer;
+      ">Resetare</button>
+    
+      <canvas 
+        id="bubbleCanvas" 
+        width="600" 
+        height="400" 
+        style="border:1px solid black; display:block; margin:20px auto;">
+      </canvas>
+    </section>
+
+    <section class="tableSection">
+      <label for="yearSelectTable">An pentru tabel: </label>
+      <select id="yearSelectTable">
+      </select>
+
+      <button id="btnGenerateTable">Generează Tabel</button>
+
+      <table id="dataTable" border="1">
+        <thead>
+          <tr>
+            <th>Țară</th>
+            <th>PIB</th>
+            <th>Speranță de viață</th>
+            <th>Populație</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Proiect Multimedia - Homos Cristian Cosmin</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

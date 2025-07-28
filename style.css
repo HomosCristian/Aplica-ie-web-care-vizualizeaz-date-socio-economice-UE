@@ -1,0 +1,96 @@
+body {
+  margin: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #181818;  
+  color: #eaeaea;       
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ffffff;             
+}
+
+section {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #262626;
+  border: 1px solid #444; 
+  border-radius: 5px;
+}
+
+.lineChartSection,
+.bubbleChartSection,
+.tableSection {
+  text-align: center;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 8px;
+  color: #dddddd;
+}
+
+select, button {
+  margin-right: 20px;
+  padding: 8px 12px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: #333;
+  color: #eaeaea;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+svg, canvas {
+  background-color: #1f1f1f;
+}
+
+#tooltip {
+  position: absolute;
+  background-color: #333;
+  border: 1px solid #666;
+  color: #ffffff;
+  padding: 6px 10px;
+  font-size: 13px;
+  pointer-events: none;
+  z-index: 10;
+  border-radius: 3px;
+}
+
+.hidden {
+  display: none;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+  background-color: #1f1f1f;
+  color: #eaeaea;
+  border: 1px solid #444;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+th {
+  background-color: #333;
+  padding: 10px;
+  font-weight: bold;
+  border-bottom: 2px solid #444;
+}
+
+td {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #444;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #999;
+}
